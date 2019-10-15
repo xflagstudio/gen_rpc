@@ -13,7 +13,7 @@
 
 To build this project you need to have the following:
 
-* **Erlang/OTP** >= 19.1
+* **Erlang/OTP** >= 21.0
 
 * **git** >= 1.7
 
@@ -113,6 +113,9 @@ and pass them as the node list in the multi-node function.
   do not want plain TCP enabled.
 
 - `tcp_client_port`: The plain TCP port `gen_rpc` will use for outgoing connections.
+
+- `tcp_server_options` and `tcp_client_options`: Settings for the `tcp` driver that `gen_rpc` will use to
+  connect to a remote `gen_rpc` server.
 
 - `ssl_server_port`: The port `gen_rpc` will use for incoming SSL connections or `false` if you do not
   want SSL enabled.
